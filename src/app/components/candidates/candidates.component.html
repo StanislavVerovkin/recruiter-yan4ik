@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="example-container">
+
+    <div>
+      <mat-radio-group formControlName="percent" id="percent">
+        <mat-radio-button value="10">10%</mat-radio-button>
+        <mat-radio-button value="16">16%</mat-radio-button>
+        <mat-radio-button value="18">18%</mat-radio-button>
+        <mat-radio-button value="20">20%</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        matInput
+        placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field >
+      <input
+        id="salary"
+        type="number"
+        formControlName="salary"
+        matInput
+        placeholder="Salary">
+    </mat-form-field>
+
+    <button
+      [disabled]="form.invalid"
+      mat-raised-button color="primary">
+      Submit
+    </button>
+
+  </div>
+</form>
+
+<app-candidate-table [candidates]="candidates"></app-candidate-table>
+

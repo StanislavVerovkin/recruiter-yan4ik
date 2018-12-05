@@ -1,0 +1,31 @@
+<ngx-datatable
+  #myTable
+  class='material expandable'
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="50"
+  [scrollbarV]="true"
+  [rows]='candidates'
+  (page)="onPage($event)"
+>
+
+  <ngx-datatable-column prop="name" name="Name" [flexGrow]="3" [minWidth]="200">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value}}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column prop="percent" name="Percent" [flexGrow]="1">
+    <ng-template let-row="value" let-value="value" ngx-datatable-cell-template>
+      <span>{{value}}</span>
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column prop="salary" name="Salary" [flexGrow]="1">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span>{{value}}</span>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>
