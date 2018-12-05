@@ -45,21 +45,29 @@ export class CandidatesComponent implements OnInit {
         let secondRevenue;
 
         if (percent === '10') {
+
             revenue = salary * 0.10;
             firstRevenue = revenue * 0.30;
             secondRevenue = revenue * 0.70;
+
         } else if (percent === '12') {
+
             revenue = salary * 0.12;
             firstRevenue = revenue * 0.30;
             secondRevenue = revenue * 0.70;
+
         } else if (percent === '16') {
+
             revenue = salary * 0.16;
             firstRevenue = revenue * 0.30;
             secondRevenue = revenue * 0.70;
+
         } else if (percent === '20') {
+
             revenue = salary * 0.20;
             firstRevenue = revenue * 0.30;
             secondRevenue = revenue * 0.70;
+
         }
 
         const candidate = new Candidate(name, salary, percent, revenue, firstRevenue, secondRevenue);
