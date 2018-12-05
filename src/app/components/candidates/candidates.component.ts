@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Candidate} from '../../models/candidate.model';
 import {CandidatesService} from '../../services/candidates.service';
-import {map, switchMap} from 'rxjs/operators';
+import {finalize, map, switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -11,9 +11,10 @@ import {Observable} from 'rxjs';
     styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
-    form: FormGroup;
 
+    public form: FormGroup;
     public candidates: Candidate[] = [];
+    public isLoaded = false;
 
     constructor(private candidatesService: CandidatesService) {
     }
@@ -34,7 +35,6 @@ export class CandidatesComponent implements OnInit {
         this.onGetCandidates().subscribe((candidates) => {
             this.candidates = candidates;
         });
-
     }
 
     onSubmit() {
@@ -76,13 +76,18 @@ export class CandidatesComponent implements OnInit {
     }
 
     onGetCandidates(): Observable<any> {
-        return this.candidatesService.getCandidates().pipe(
-            map((candidates) => {
-                return Object.keys(candidates).map((item) => ({
-                        ...candidates[item],
-                    })
-                );
-            })
-        );
+        this.isLoaded = true;
+        return this.candidatesService.getCandidates()
+            .pipe(
+                map((candidates) => {
+                    if (candidates !== null) {
+                        return Object.keys(candidates).map((item) => ({
+                                ...candidates[item],
+                            })
+                        );
+                    }
+                }),
+                finalize(() => this.isLoaded = false)
+            );
     }
 }
