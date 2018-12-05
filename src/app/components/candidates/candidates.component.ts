@@ -40,26 +40,26 @@ export class CandidatesComponent implements OnInit {
     onSubmit() {
         const {name, salary, percent} = this.form.value;
 
-        let revenue = 0;
-        let firstRevenue = 0;
-        let secondRevenue = 0;
+        let revenue;
+        let firstRevenue;
+        let secondRevenue;
 
         if (percent === '10') {
             revenue = salary * 0.10;
-            firstRevenue = revenue * 0.10;
-            secondRevenue = revenue * 0.40;
+            firstRevenue = revenue * 0.30;
+            secondRevenue = revenue * 0.70;
+        } else if (percent === '12') {
+            revenue = salary * 0.12;
+            firstRevenue = revenue * 0.30;
+            secondRevenue = revenue * 0.70;
         } else if (percent === '16') {
             revenue = salary * 0.16;
-            firstRevenue = revenue * 0.10;
-            secondRevenue = revenue * 0.40;
-        } else if (percent === '18') {
-            revenue = salary * 0.18;
-            firstRevenue = revenue * 0.10;
-            secondRevenue = revenue * 0.40;
+            firstRevenue = revenue * 0.30;
+            secondRevenue = revenue * 0.70;
         } else if (percent === '20') {
             revenue = salary * 0.20;
-            firstRevenue = revenue * 0.10;
-            secondRevenue = revenue * 0.40;
+            firstRevenue = revenue * 0.30;
+            secondRevenue = revenue * 0.70;
         }
 
         const candidate = new Candidate(name, salary, percent, revenue, firstRevenue, secondRevenue);
