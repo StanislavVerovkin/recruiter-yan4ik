@@ -9,37 +9,37 @@
         [loadingIndicator]="isLoaded"
         (page)="onPage($event)">
 
-    <ngx-datatable-column [resizeable]="false" [canAutoResize]="false" prop="name" name="Name" [flexGrow]="3" [minWidth]="200">
+    <ngx-datatable-column [resizeable]="false" [canAutoResize]="false" prop="name" name="Name" [minWidth]="200">
         <ng-template let-value="value">
             {{value}}
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="percent" name="Percent" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="percent" name="Percent">
         <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value}}</span>
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="salary" name="Salary" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="salary" name="Salary" >
         <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value | number: '1.2'}}</span>
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="currency" name="Currency" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="currency" name="Currency">
         <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value}}</span>
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="revenue" name="Revenue" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="revenue" name="Revenue">
         <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value | number: '1.2'}}</span>
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="firstRevenue" name="First Revenue" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="firstRevenue" name="First Revenue" >
         <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value | number: '1.2'}}</span>
         </ng-template>
@@ -51,7 +51,7 @@
         </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column [resizeable]="false" prop="date" name="Date" [flexGrow]="1">
+    <ngx-datatable-column [resizeable]="false" prop="date" name="Date">
         <ng-template let-value="value" ngx-datatable-cell-template>
             <strong>{{value | date: 'MM/yyyy'}}</strong>
         </ng-template>
