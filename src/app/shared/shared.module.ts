@@ -12,7 +12,7 @@ import {
     MatSelectModule,
     MatInputModule,
     MatTableModule,
-    MatProgressSpinnerModule, MatPaginatorModule, MatDatepickerModule, MatNativeDateModule
+    MatProgressSpinnerModule, MatPaginatorModule, MatDatepickerModule, MatNativeDateModule, MatCardModule
 } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -37,7 +37,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
         MatProgressSpinnerModule,
         MatPaginatorModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatCardModule
     ],
     exports: [
         MatRadioModule,
@@ -57,7 +58,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
         MatProgressSpinnerModule,
         MatPaginatorModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatCardModule
     ],
 })
 export class SharedModule {

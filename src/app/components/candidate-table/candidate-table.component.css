@@ -6,6 +6,10 @@
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.ng-template {
+    width: 174.149px;
+}
+
 #input {
     font-size: 14px;
     display: block;

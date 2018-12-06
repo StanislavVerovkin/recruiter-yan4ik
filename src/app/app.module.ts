@@ -2,7 +2,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
-
 import {AppComponent} from './app.component';
 import {NgProgressModule} from '@ngx-progressbar/core';
 import {NgProgressRouterModule} from '@ngx-progressbar/router';
@@ -17,6 +16,8 @@ import {ToDoComponent} from './components/to-do/to-do.component';
 import {CandidateTableComponent} from './components/candidate-table/candidate-table.component';
 import {CandidatesService} from './services/candidates.service';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {CurrencyComponent} from './components/currency/currency.component';
+import {CurrencyService} from './services/currency.service';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
         CandidatesComponent,
         ToDoComponent,
         CandidateTableComponent,
+        CurrencyComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,7 +43,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
         ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
     ],
     bootstrap: [AppComponent],
-    providers: [CandidatesService]
+    providers: [CandidatesService, CurrencyService]
 })
 export class AppModule {
 }
