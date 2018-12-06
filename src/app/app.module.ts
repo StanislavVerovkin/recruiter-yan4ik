@@ -12,36 +12,36 @@ import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CandidatesComponent } from './components/candidates/candidates.component';
-import { ToDoComponent } from './components/to-do/to-do.component';
-import { CandidateTableComponent } from './components/candidate-table/candidate-table.component';
+import {CandidatesComponent} from './components/candidates/candidates.component';
+import {ToDoComponent} from './components/to-do/to-do.component';
+import {CandidateTableComponent} from './components/candidate-table/candidate-table.component';
 import {CandidatesService} from './services/candidates.service';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    CandidatesComponent,
-    ToDoComponent,
-    CandidateTableComponent,
-  ],
-  imports: [
-    BrowserModule,
-    NgxDatatableModule,
-    BrowserAnimationsModule,
-    SharedModule,
-    AppRoutingModule,
-    NgProgressModule.forRoot(),
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NgProgressRouterModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
-  ],
-  bootstrap: [AppComponent],
-  providers: [CandidatesService]
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        CandidatesComponent,
+        ToDoComponent,
+        CandidateTableComponent,
+    ],
+    imports: [
+        BrowserModule,
+        NgxDatatableModule,
+        BrowserAnimationsModule,
+        SharedModule,
+        AppRoutingModule,
+        NgProgressModule.forRoot(),
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgProgressRouterModule,
+        ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+    ],
+    bootstrap: [AppComponent],
+    providers: [CandidatesService]
 })
 export class AppModule {
 }

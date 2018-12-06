@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 @Component({
     selector: 'app-candidates',
     templateUrl: './candidates.component.html',
-    styleUrls: ['./candidates.component.css']
+    styleUrls: ['./candidates.component.css'],
 })
 export class CandidatesComponent implements OnInit {
 
@@ -29,6 +29,12 @@ export class CandidatesComponent implements OnInit {
             ]),
             'percent': new FormControl(null, [
                 Validators.required
+            ]),
+            'date': new FormControl(null, [
+                Validators.required
+            ]),
+            'currency': new FormControl(null, [
+                Validators.required
             ])
         });
 
@@ -38,8 +44,8 @@ export class CandidatesComponent implements OnInit {
     }
 
     onSubmit() {
-        const {name, salary, percent} = this.form.value;
-
+        const {name, salary, percent, date, currency} = this.form.value;
+debugger
         let revenue;
         let firstRevenue;
         let secondRevenue;
@@ -70,7 +76,7 @@ export class CandidatesComponent implements OnInit {
 
         }
 
-        const candidate = new Candidate(name, salary, percent, revenue, firstRevenue, secondRevenue);
+        const candidate = new Candidate(name, salary, percent, revenue, firstRevenue, secondRevenue, date, currency);
 
         this.candidatesService.addCandidate(candidate)
             .pipe(

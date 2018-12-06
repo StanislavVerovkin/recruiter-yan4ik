@@ -6,6 +6,8 @@ export class Candidate {
         public revenue: number,
         public firstRevenue: number,
         public secondRevenue: number,
+        public date: any,
+        public currency: any,
         public id?: number
     ) {
     }

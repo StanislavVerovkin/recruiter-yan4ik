@@ -24,25 +24,37 @@
 
     <ngx-datatable-column prop="salary" name="Salary" [flexGrow]="1">
         <ng-template let-value="value" ngx-datatable-cell-template>
+            <span>{{value | number: '1.2'}}</span>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column prop="currency" name="Currency" [flexGrow]="1">
+        <ng-template let-value="value" ngx-datatable-cell-template>
             <span>{{value}}</span>
         </ng-template>
     </ngx-datatable-column>
 
     <ngx-datatable-column prop="revenue" name="Revenue" [flexGrow]="1">
         <ng-template let-value="value" ngx-datatable-cell-template>
-            <span>{{value}}</span>
+            <span>{{value | number: '1.2'}}</span>
         </ng-template>
     </ngx-datatable-column>
 
     <ngx-datatable-column prop="firstRevenue" name="First Revenue" [flexGrow]="1">
         <ng-template let-value="value" ngx-datatable-cell-template>
-            <span>{{value}}</span>
+            <span>{{value | number: '1.2'}}</span>
         </ng-template>
     </ngx-datatable-column>
 
     <ngx-datatable-column prop="secondRevenue" name="Second Revenue" [flexGrow]="1">
         <ng-template let-value="value" ngx-datatable-cell-template>
-            <span>{{value}}</span>
+            <span>{{value | number: '1.2'}}</span>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column prop="date" name="Date" [flexGrow]="1">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            <strong>{{value | date: 'MM/yyyy'}}</strong>
         </ng-template>
     </ngx-datatable-column>
 
