@@ -1,7 +1,7 @@
 .ngx-datatable {
     height: 50%;
     margin-top: 20px;
-    width: 85%;
+    width: 69%;
     margin-left: 100px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -10,11 +10,12 @@
     width: 174.149px;
 }
 
-#input {
-    font-size: 14px;
-    display: block;
-    background: transparent;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #5264AE;
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px) {
+
+    .ngx-datatable {
+        width: 100%;
+        margin-left: 0;
+    }
 }

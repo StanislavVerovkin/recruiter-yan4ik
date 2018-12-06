@@ -1,23 +1,37 @@
 .example-container {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  margin-left: 100px;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 .example-container > * {
-  width: 100%;
+    width: 100%;
 }
 
 .example-container form {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .example-container form > * {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .example-container .mat-radio-button {
-  margin: 0 5px;
+    margin: 0 5px;
+}
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px) {
+
+    .mat-radio-group {
+        display: flex;
+    }
+
+    .example-container {
+        width: 100%;
+        margin-left: 0;
+    }
 }
