@@ -10,10 +10,10 @@ export class CandidatesService {
   }
 
   addCandidate(candidate: Candidate): Observable<any> {
-    return this.http.post('https://recruiter-yan4ik.firebaseio.com/candidates.json', candidate);
+    return this.http.post('https://recruiter-yanchik.firebaseio.com/candidates.json', candidate);
   }
 
   getCandidates(): Observable<any> {
-    return this.http.get('https://recruiter-yan4ik.firebaseio.com/candidates.json');
+    return this.http.get('https://recruiter-yanchik.firebaseio.com/candidates.json');
   }
 }

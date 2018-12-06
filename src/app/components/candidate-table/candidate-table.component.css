@@ -1,7 +1,7 @@
 .ngx-datatable {
     height: 50%;
     margin-top: 20px;
-    width: 69%;
+    width: 80%;
     margin-left: 100px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -17,5 +17,17 @@ and (max-device-width: 736px) {
     .ngx-datatable {
         width: 100%;
         margin-left: 0;
+        height: 600px;
+    }
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+
+    .ngx-datatable {
+        width: 100%;
+        margin-left: 0;
+        height: 600px;
     }
 }
