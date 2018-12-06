@@ -48,3 +48,23 @@ mat-sidenav {
     border-right-width: 1px;
     border-image: linear-gradient(to top, #c1c1c1, rgba(0, 0, 0, 0)) 1 100%
 }
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px) {
+
+    .account,
+    .logout {
+        display: none;
+    }
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+
+    .account,
+    .logout {
+        display: none;
+    }
+}
