@@ -18,6 +18,7 @@ import {CandidatesService} from './services/candidates.service';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {CurrencyComponent} from './components/currency/currency.component';
 import {CurrencyService} from './services/currency.service';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {CurrencyService} from './services/currency.service';
         NgProgressModule.forRoot(),
         FormsModule,
         ReactiveFormsModule,
+        NgxSpinnerModule,
         HttpClientModule,
         NgProgressRouterModule,
         ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
