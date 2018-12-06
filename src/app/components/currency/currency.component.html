@@ -1,0 +1,7 @@
+<ng-container *ngFor="let c of currency">
+    <button mat-button>
+        {{c.ccy}}
+        {{c.buy | number: '1.2'}} /
+        {{c.sale | number: '1.2'}}
+    </button>
+</ng-container>
