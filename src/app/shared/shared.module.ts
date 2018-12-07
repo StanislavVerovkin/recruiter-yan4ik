@@ -16,6 +16,8 @@ import {
 } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +40,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
         MatPaginatorModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatCardModule
+        MatCardModule,
+        NgxDatatableModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     exports: [
         MatRadioModule,
@@ -59,7 +64,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
         MatPaginatorModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatCardModule
+        MatCardModule,
+        NgxDatatableModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
 })
 export class SharedModule {

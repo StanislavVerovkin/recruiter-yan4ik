@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Candidate} from '../../models/candidate.model';
-import {CandidatesService} from '../../services/candidates.service';
+import {Candidate} from '../shared/models/candidate.model';
+import {CandidatesService} from '../shared/services/candidates.service';
 import {finalize, map, switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
@@ -45,7 +45,7 @@ export class CandidatesComponent implements OnInit {
 
     onSubmit() {
         const {name, salary, percent, date, currency} = this.form.value;
-debugger
+
         let revenue;
         let firstRevenue;
         let secondRevenue;
