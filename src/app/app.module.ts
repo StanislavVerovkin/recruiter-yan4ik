@@ -5,8 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
-import {CandidatesService} from './main/shared/services/candidates.service';
-import {CurrencyService} from './main/shared/services/currency.service';
 import {AuthModule} from './auth/auth.module';
 import {MainModule} from './main/main.module';
 
@@ -25,7 +23,7 @@ import {MainModule} from './main/main.module';
         BrowserAnimationsModule,
     ],
     bootstrap: [AppComponent],
-    providers: [CandidatesService, CurrencyService]
+    providers: []
 })
 export class AppModule {
 }
