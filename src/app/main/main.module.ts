@@ -10,6 +10,7 @@ import {ToDoComponent} from './to-do/to-do.component';
 import {CandidatesService} from './shared/services/candidates.service';
 import {CurrencyService} from './shared/services/currency.service';
 import {CandidatesComponent} from './candidates/candidates.component';
+import {AuthService} from './shared/services/auth.service';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {CandidatesComponent} from './candidates/candidates.component';
     providers: [
         CandidatesService,
         CurrencyService,
+        AuthService
     ]
 })
 export class MainModule {

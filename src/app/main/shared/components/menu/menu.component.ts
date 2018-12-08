@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ObservableMedia, MediaChange} from '@angular/flex-layout';
 import {Subscription} from 'rxjs';
+import {Candidate} from '../../models/candidate.model';
 
 @Component({
     selector: 'app-menu',
@@ -8,10 +9,12 @@ import {Subscription} from 'rxjs';
     styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
     opened = true;
     over = 'side';
-
     watcher: Subscription;
+
+    user: {};
 
     constructor(media: ObservableMedia) {
         this.watcher = media.subscribe((change: MediaChange) => {
@@ -26,6 +29,7 @@ export class MenuComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.user = JSON.parse(localStorage.getItem('user'));
+        console.log(this.user);
     }
 }
