@@ -58,8 +58,7 @@ mat-sidenav {
 and (min-device-width: 414px)
 and (max-device-width: 736px) {
 
-    .account,
-    .logout {
+    .account {
         display: none;
     }
 }
@@ -68,8 +67,7 @@ and (max-device-width: 736px) {
 and (min-device-width: 375px)
 and (max-device-width: 667px) {
 
-    .account,
-    .logout {
+    .account {
         display: none;
     }
 }

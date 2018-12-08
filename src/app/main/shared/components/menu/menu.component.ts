@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
     public over = 'side';
     public watcher: Subscription;
 
-    public user: {};
+    public user: any;
 
     constructor(media: ObservableMedia, private router: Router) {
         this.watcher = media.subscribe((change: MediaChange) => {
