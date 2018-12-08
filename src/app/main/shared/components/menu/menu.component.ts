@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ObservableMedia, MediaChange} from '@angular/flex-layout';
 import {Subscription} from 'rxjs';
-import {Candidate} from '../../models/candidate.model';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-menu',
@@ -10,13 +10,13 @@ import {Candidate} from '../../models/candidate.model';
 })
 export class MenuComponent implements OnInit {
 
-    opened = true;
-    over = 'side';
-    watcher: Subscription;
+    public opened = true;
+    public over = 'side';
+    public watcher: Subscription;
 
-    user: {};
+    public user: {};
 
-    constructor(media: ObservableMedia) {
+    constructor(media: ObservableMedia, private router: Router) {
         this.watcher = media.subscribe((change: MediaChange) => {
             if (change.mqAlias === 'sm' || change.mqAlias === 'xs') {
                 this.opened = false;
@@ -31,5 +31,10 @@ export class MenuComponent implements OnInit {
     ngOnInit() {
         this.user = JSON.parse(localStorage.getItem('user'));
         console.log(this.user);
+    }
+
+    onLogout() {
+        localStorage.removeItem('user');
+        this.router.navigate(['/login']);
     }
 }
